@@ -50,11 +50,6 @@ const emit = defineEmits<{
         class="text-gray-800 dark:text-gray-300 hover:text-black dark:hover:text-white font-medium"
         >Pricing</router-link
       >
-      <router-link
-        to="/setup"
-        class="text-gray-800 dark:text-gray-300 hover:text-black dark:hover:text-white font-medium"
-        >Setup/Login</router-link
-      >
       <!-- Theme Toggle Button -->
       <button
         @click="$emit('toggle-theme')"
@@ -62,6 +57,11 @@ const emit = defineEmits<{
       >
         {{ props.isDark ? 'Light Mode' : 'Dark Mode' }}
       </button>
+      <router-link
+        to="/setup"
+        class="text-gray-800 dark:text-gray-300 hover:text-black dark:hover:text-white font-medium"
+        >Setup</router-link
+      >
     </div>
   </nav>
 </template>
