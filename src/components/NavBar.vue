@@ -15,7 +15,7 @@ const emit = defineEmits<{
 
 <template>
   <nav
-    class="flex items-center justify-between py-4 bg-white dark:bg-gray-900 fixed top-0 left-4 w-full z-10"
+    class="flex items-center justify-between py-4 bg-white dark:bg-gray-900 fixed top-0 left-0 w-full z-10"
   >
     <!-- Logo Section -->
     <div class="flex items-center space-x-4">

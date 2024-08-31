@@ -22,11 +22,17 @@ onMounted(() => {
 </script>
 
 <template>
-  <div id="app" class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen">
-    <header>
+  <div
+    id="app"
+    class="flex flex-col min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100"
+  >
+    <header class="fixed w-full z-10">
       <NavBar @toggle-theme="toggleTheme" :isDark="isDark" />
     </header>
-    <RouterView />
+    <!-- Add padding-top here to avoid content being overlapped by the NavBar -->
+    <main class="flex-1 pt-40">
+      <RouterView />
+    </main>
   </div>
 </template>
 
@@ -87,7 +93,6 @@ nav a:first-of-type {
     text-align: left;
     margin-left: -1rem;
     font-size: 1rem;
-
     padding: 1rem 0;
     margin-top: 1rem;
   }
