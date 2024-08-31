@@ -1,10 +1,14 @@
 @import './base.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%; /* Ensure app takes full width */
+  margin: 0;
+  padding: 0; /* Remove padding to avoid spacing issues */
   font-weight: normal;
+  overflow-x: hidden; /* 防止水平滚动条 */
 }
 
 a,
@@ -28,8 +32,7 @@ a,
   }
 
   #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+    display: block; /* Change grid to block to prevent layout shift */
+    padding: 0; /* Remove padding in larger screens */
   }
 }
