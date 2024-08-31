@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
-import { defineProps, defineEmits } from 'vue';
+import { computed, defineProps, defineEmits } from 'vue';
 
 const router = useRouter();
+const currentRoute = computed(() => router.currentRoute.value.path);
 
 const props = defineProps<{
   isDark: boolean;
@@ -24,21 +25,30 @@ const emit = defineEmits<{
 
     <!-- Middle Navigation Links -->
     <div
-      class="absolute left-1/2 transform -translate-x-1/2 flex space-x-2 bg-gray-100 dark:bg-gray-800 p-1 rounded-full"
+      class="absolute left-1/2 transform -translate-x-1/2 flex space-x-2 bg-gray-100 dark:bg-gray-800 p-1 flex-row items-center align-center py-2 px-6 !rounded-xl dark:text-white text-black"
     >
       <router-link
         to="/home"
-        class="px-4 py-2 text-gray-800 dark:text-gray-300 hover:text-black dark:hover:text-white font-medium rounded-full hover:bg-gray-200 dark:hover:bg-gray-600"
+        :class="[
+          'flex flex-row items-center py-2 px-6 text-gray-800 dark:text-gray-300 dark:bg-gray-800 font-medium !rounded-xl',
+          currentRoute === '/home' ? 'bg-gray-300 text-black dark:bg-gray-500' : ''
+        ]"
         >Home</router-link
       >
       <router-link
         to="/generate"
-        class="px-4 py-2 text-gray-800 dark:text-gray-300 hover:text-black dark:hover:text-white font-medium rounded-full hover:bg-gray-200 dark:hover:bg-gray-600"
+        :class="[
+          'flex flex-row items-center py-2 px-6 text-gray-800 dark:text-gray-300 dark:bg-gray-800 font-medium !rounded-xl',
+          currentRoute === '/generate' ? 'bg-gray-200 text-black dark:bg-gray-500' : ''
+        ]"
         >Generate</router-link
       >
       <router-link
         to="/show"
-        class="px-4 py-2 text-gray-800 dark:text-gray-300 hover:text-black dark:hover:text-white font-medium rounded-full hover:bg-gray-200 dark:hover:bg-gray-600"
+        :class="[
+          'flex flex-row items-center py-2 px-6 text-gray-800 dark:text-gray-300 dark:bg-gray-800 font-medium !rounded-xl',
+          currentRoute === '/show' ? 'bg-gray-200 text-black dark:bg-gray-500' : ''
+        ]"
         >Show</router-link
       >
     </div>
@@ -67,5 +77,7 @@ const emit = defineEmits<{
 </template>
 
 <style scoped>
-/* No additional styles needed as Tailwind CSS handles all styling */
+.router-link:hover {
+  background-color: transparent !important;
+}
 </style>
