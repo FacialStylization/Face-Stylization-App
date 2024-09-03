@@ -29,7 +29,7 @@ const props = defineProps({
 <template>
   <div class="flex flex-col items-center justify-center py-16">
     <!-- Top Heading -->
-    <h1 class="text-4xl font-bold text-center mb-8">
+    <h1 class="text-4xl font-serif text-center mb-8">
       The best and simplest way to generate Vtuber
     </h1>
 
@@ -52,12 +52,14 @@ const props = defineProps({
           <!-- Content Overlay -->
           <div class="relative z-10 flex flex-col items-center justify-center px-6 py-20">
             <!-- Text Content -->
-            <h1 class="text-5xl font-bold text-white mb-4">T2Vtuber</h1>
-            <p class="text-xl text-white mb-6">High quality generations of live2d textures</p>
+            <h1 class="text-5xl font-serif text-white mb-4">T2Vtuber</h1>
+            <p class="text-xl font-serif text-white mb-6">
+              High quality generations of live2d textures
+            </p>
             <!-- Button -->
             <button
               @click="toGenerate"
-              class="px-6 py-3 bg-white text-black rounded-full font-medium shadow-md hover:bg-gray-200"
+              class="px-6 py-3 bg-white font-serif text-black rounded-full shadow-md hover:bg-gray-200"
             >
               Generate Textures →
             </button>
@@ -80,11 +82,11 @@ const props = defineProps({
               class="absolute inset-0 flex flex-col justify-between items-start p-4 bg-black bg-opacity-50"
             >
               <!-- Title at the top -->
-              <h2 class="text-6xl font-bold text-white mb-2">RoadMap</h2>
+              <h2 class="text-6xl font-serif text-white mb-2">RoadMap</h2>
               <!-- Button at the bottom -->
               <button
                 @click="toRoadMap"
-                class="px-4 py-2 mt-auto bg-white text-black rounded-full font-medium shadow-md hover:bg-gray-200"
+                class="px-4 py-2 mt-auto bg-white text-black rounded-full font-serif shadow-md hover:bg-gray-200"
               >
                 Go to RoadMap →
               </button>
@@ -101,11 +103,11 @@ const props = defineProps({
               class="absolute inset-0 flex flex-col justify-between items-start p-4 bg-black bg-opacity-50"
             >
               <!-- Title at the top -->
-              <h2 class="text-6xl font-bold text-white mb-2">Pricing</h2>
+              <h2 class="text-6xl font-serif text-white mb-2">Pricing</h2>
               <!-- Button at the bottom -->
               <button
                 @click="toPricing"
-                class="px-4 py-2 mt-auto bg-white text-black rounded-full font-medium shadow-md hover:bg-gray-200"
+                class="px-4 py-2 mt-auto bg-white text-black rounded-full font-serif shadow-md hover:bg-gray-200"
               >
                 Go to Pricing →
               </button>
@@ -122,11 +124,11 @@ const props = defineProps({
               class="absolute inset-0 flex flex-col justify-between items-start p-4 bg-black bg-opacity-50"
             >
               <!-- Title at the top -->
-              <h2 class="text-6xl font-bold text-white mb-2">Setup</h2>
+              <h2 class="text-6xl font-serif text-white mb-2">Setup</h2>
               <!-- Button at the bottom -->
               <button
                 @click="toSetup"
-                class="px-4 py-2 mt-auto bg-white text-black rounded-full font-medium shadow-md hover:bg-gray-200"
+                class="px-4 py-2 mt-auto bg-white text-black rounded-full font-serif shadow-md hover:bg-gray-200"
               >
                 Go to Setup →
               </button>
