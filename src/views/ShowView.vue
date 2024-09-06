@@ -1,18 +1,6 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-// @ts-ignore: next-line
-import { loadlive2d } from 'live2d-widget';
-
-onMounted(() => {
-  const modelPath = '../assets/hiyori_free_en/runtime/hiyori_free_t08.model3.json';
-
-  loadlive2d('live2d-widget-container', modelPath).then(() => {
-    console.log('Live2D model loaded successfully.');
-  }).catch((error: any) => {
-    console.error('Failed to load Live2D model:', error);
-  });
-});
-
+import { ref } from 'vue';
+import Live2D from '@/components/Live2D.vue';
 // Reference for image URL
 import pic4 from '@/assets/pic4.png';
 const imageUrl = ref(pic4);
@@ -41,8 +29,12 @@ const imageUrl = ref(pic4);
       <div
         class="relative flex-grow flex items-center justify-center rounded-2xl dark:border-gray-800 p-4"
       >
-        <!-- <img :src="imageUrl" alt="Generated" class="w-full h-auto object-cover" /> -->
-        <div id="live2d-widget-container"></div>
+        <!-- <img
+          :src="imageUrl"
+          alt="Generated"
+          class="w-full h-auto object-cover"
+        /> -->
+        <Live2D />
       </div>
     </div>
   </div>

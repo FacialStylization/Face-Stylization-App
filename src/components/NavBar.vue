@@ -15,7 +15,9 @@ const emit = defineEmits<{
 </script>
 
 <template>
-  <nav class="flex items-center justify-between py-4 fixed top-0 left-0 w-full z-10">
+  <nav
+    class="flex items-center justify-between py-4 fixed top-0 left-0 w-full z-10"
+  >
     <!-- Logo Section -->
     <div class="flex items-center space-x-4">
       <img src="@/assets/logo.png" alt="Logo" class="h-20" />
@@ -26,10 +28,10 @@ const emit = defineEmits<{
       class="absolute left-1/2 transform -translate-x-1/2 flex space-x-1 bg-gray-100 dark:bg-gray-800 py-1 px-3 rounded-lg dark:text-white text-black"
     >
       <router-link
-        to="/home"
+        to="/"
         :class="[
           'py-1 px-4 text-gray-800 dark:text-gray-300 font-medium rounded-lg transition-colors duration-200',
-          currentRoute === '/home' ? 'bg-gray-300 text-black dark:bg-gray-500' : ''
+          currentRoute === '/' ? 'bg-gray-300 text-black dark:bg-gray-500' : ''
         ]"
         >Home</router-link
       >
@@ -37,7 +39,9 @@ const emit = defineEmits<{
         to="/generate"
         :class="[
           'py-1 px-4 text-gray-800 dark:text-gray-300 font-medium rounded-lg transition-colors duration-200',
-          currentRoute === '/generate' ? 'bg-gray-300 text-black dark:bg-gray-500' : ''
+          currentRoute === '/generate'
+            ? 'bg-gray-300 text-black dark:bg-gray-500'
+            : ''
         ]"
         >Generate</router-link
       >
@@ -45,7 +49,9 @@ const emit = defineEmits<{
         to="/show"
         :class="[
           'py-1 px-4 text-gray-800 dark:text-gray-300 font-medium rounded-lg transition-colors duration-200',
-          currentRoute === '/show' ? 'bg-gray-300 text-black dark:bg-gray-500' : ''
+          currentRoute === '/show'
+            ? 'bg-gray-300 text-black dark:bg-gray-500'
+            : ''
         ]"
         >Show</router-link
       >
