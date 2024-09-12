@@ -5,6 +5,7 @@ import ShowView from '@/views/ShowView.vue';
 import PricingView from '@/views/PricingView.vue';
 import SetupView from '@/views/SetupView.vue';
 import LoginView from '@/views/LoginView.vue';
+import RoadmapView from '@/views/RoadmapView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,6 +39,11 @@ const router = createRouter({
       path: '/login',
       name: 'login',
       component: LoginView
+    },
+    {
+      path: '/roadmap',
+      name: 'roadmap',
+      component: RoadmapView
     },
     {
       path: '/about',
