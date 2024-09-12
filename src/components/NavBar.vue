@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
-import { computed, defineProps, defineEmits } from 'vue';
+import { computed } from 'vue';
 
 const router = useRouter();
 const currentRoute = computed(() => router.currentRoute.value.path);

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from 'vue';
-
 const toGenerate = () => {
   // Redirect to /generate
   window.location.href = '/generate';
@@ -50,7 +48,9 @@ const props = defineProps({
             class="absolute inset-0 object-cover w-full h-full rounded-3xl"
           />
           <!-- Content Overlay -->
-          <div class="relative z-10 flex flex-col items-center justify-center px-6 py-20">
+          <div
+            class="relative z-10 flex flex-col items-center justify-center px-6 py-20"
+          >
             <!-- Text Content -->
             <h1 class="text-5xl font-serif text-white mb-4">T2Vtuber</h1>
             <p class="text-xl font-serif text-white mb-6">
@@ -69,14 +69,20 @@ const props = defineProps({
     </div>
 
     <!-- Additional Content Section -->
-    <div class="flex items-center justify-center w-5/6 px-4 py-10 rounded-3xl border-gray-300">
+    <div
+      class="flex items-center justify-center w-5/6 px-4 py-10 rounded-3xl border-gray-300"
+    >
       <div
         class="flex w-full max-w-full mx-auto p-1 rounded-3xl bg-gray-300 shadow-xl border-20 border-gray-300"
       >
         <!-- Image Container 1 -->
         <div class="relative w-1/3 p-4">
           <div class="relative rounded-3xl overflow-hidden">
-            <img src="@/assets/pic1.png" alt="RoadMap" class="object-cover w-full h-full" />
+            <img
+              src="@/assets/pic1.png"
+              alt="RoadMap"
+              class="object-cover w-full h-full"
+            />
             <!-- Title and Button Overlay -->
             <div
               class="absolute inset-0 flex flex-col justify-between items-start p-4 bg-black bg-opacity-50"
@@ -97,7 +103,11 @@ const props = defineProps({
         <!-- Image Container 2 -->
         <div class="relative w-1/3 p-4">
           <div class="relative rounded-3xl overflow-hidden">
-            <img src="@/assets/pic2.png" alt="Pricing" class="object-cover w-full h-full" />
+            <img
+              src="@/assets/pic2.png"
+              alt="Pricing"
+              class="object-cover w-full h-full"
+            />
             <!-- Title and Button Overlay -->
             <div
               class="absolute inset-0 flex flex-col justify-between items-start p-4 bg-black bg-opacity-50"
@@ -118,7 +128,11 @@ const props = defineProps({
         <!-- Image Container 3 -->
         <div class="relative w-1/3 p-4">
           <div class="relative rounded-3xl overflow-hidden">
-            <img src="@/assets/pic3.png" alt="Setup" class="object-cover w-full h-full" />
+            <img
+              src="@/assets/pic3.png"
+              alt="Setup"
+              class="object-cover w-full h-full"
+            />
             <!-- Title and Button Overlay -->
             <div
               class="absolute inset-0 flex flex-col justify-between items-start p-4 bg-black bg-opacity-50"
