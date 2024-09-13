@@ -1,39 +1,40 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 
-// 导入图像
-import overView from '@/assets/overview.png';
-import homeView from '@/assets/homeview.png';
-import generateView from '@/assets/generateview.png';
-import showView from '@/assets/showview.png';
-import pricingView from '@/assets/pricingview.png';
-import setupView from '@/assets/setupview.png';
-import loginView from '@/assets/loginview.png';
+import p1 from '@/assets/slide/1.png';
+import p2 from '@/assets/slide/2.png';
+import p3 from '@/assets/slide/3.png';
+import p4 from '@/assets/slide/4.png';
+import p5 from '@/assets/slide/5.png';
+import p6 from '@/assets/slide/6.png';
+import p7 from '@/assets/slide/7.png';
+import p8 from '@/assets/slide/8.png';
+import p9 from '@/assets/slide/9.png';
+import p10 from '@/assets/slide/10.png';
+import p11 from '@/assets/slide/11.png';
+import p12 from '@/assets/slide/12.png';
+import p13 from '@/assets/slide/13.png';
+import p14 from '@/assets/slide/14.png';
+import p15 from '@/assets/slide/15.png';
+import p16 from '@/assets/slide/16.png';
+import p17 from '@/assets/slide/17.png';
+import p18 from '@/assets/slide/18.png';
 
 const images = [
-  overView,
-  homeView,
-  generateView,
-  showView,
-  pricingView,
-  setupView,
-  loginView
+ p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18
 ];
 
-// 定义响应式数据
 const currentIndex = ref(0);
 
 const prevSlide = (): void => {
   currentIndex.value--;
   if (currentIndex.value < 0) {
-    // 设置为最后一个元素的索引
     currentIndex.value = images.length - 1;
   }
 };
 
 const nextSlide = (): void => {
   currentIndex.value++;
-  // 重置为第一个元素的索引
   if (currentIndex.value >= images.length) {
     currentIndex.value = 0;
   }
@@ -60,7 +61,7 @@ const nextSlide = (): void => {
             block: currentIndex === index
           }"
         >
-          <img :src="image" class="block mx-auto w-1/2 rounded-lg" />
+          <img :src="image" class="block mx-auto w-3/4 rounded-lg" />
         </div>
         <div
           class="absolute inset-y-0 left-0 flex items-center justify-center p-4"
