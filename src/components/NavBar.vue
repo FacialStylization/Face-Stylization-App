@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router';
-import { computed } from 'vue';
+import { useRouter } from "vue-router";
+import { computed } from "vue";
 
 const router = useRouter();
 const currentRoute = computed(() => router.currentRoute.value.path);
@@ -10,7 +10,7 @@ const props = defineProps<{
 }>();
 
 const emit = defineEmits<{
-  (e: 'toggle-theme'): void;
+  (e: "toggle-theme"): void;
 }>();
 </script>
 
@@ -31,7 +31,7 @@ const emit = defineEmits<{
         to="/"
         :class="[
           'py-1 px-4 text-gray-800 dark:text-gray-300 font-medium rounded-lg transition-colors duration-200',
-          currentRoute === '/' ? 'bg-gray-300 text-black dark:bg-gray-500' : ''
+          currentRoute === '/' ? 'bg-gray-300 text-black dark:bg-gray-500' : '',
         ]"
         >Home</router-link
       >
@@ -41,7 +41,7 @@ const emit = defineEmits<{
           'py-1 px-4 text-gray-800 dark:text-gray-300 font-medium rounded-lg transition-colors duration-200',
           currentRoute === '/generate'
             ? 'bg-gray-300 text-black dark:bg-gray-500'
-            : ''
+            : '',
         ]"
         >Generate</router-link
       >
@@ -51,7 +51,7 @@ const emit = defineEmits<{
           'py-1 px-4 text-gray-800 dark:text-gray-300 font-medium rounded-lg transition-colors duration-200',
           currentRoute === '/show'
             ? 'bg-gray-300 text-black dark:bg-gray-500'
-            : ''
+            : '',
         ]"
         >Show</router-link
       >
@@ -69,7 +69,7 @@ const emit = defineEmits<{
         @click="$emit('toggle-theme')"
         class="p-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white rounded-full focus:outline-none"
       >
-        {{ props.isDark ? 'Light Mode' : 'Dark Mode' }}
+        {{ props.isDark ? "Light Mode" : "Dark Mode" }}
       </button>
       <router-link
         to="/setup"
