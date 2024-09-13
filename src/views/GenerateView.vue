@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import pic4 from '@/assets/pic4.png';
+import { useRouter } from 'vue-router';
+import pic4 from '@/assets/p4.png';
 
+const router = useRouter(); // Init useRouter
 const imageUrl = ref(pic4);
 const description = ref(
   'Ethereal realm with floating islands, bridges connecting clouds, mirroring dreamy anime visuals.'
@@ -10,8 +12,8 @@ const description = ref(
 const showProgressBar = ref(false);
 const generationComplete = ref(false);
 const progressValue = ref(0);
-const baseTime = 10; // 基础时间
-const timeVariance = 5; // 时间误差
+const baseTime = 10;
+const timeVariance = 5;
 
 const imageWidth = ref(0);
 const imageHeight = ref(0);
@@ -30,26 +32,30 @@ function generateImage() {
       showProgressBar.value = false;
       generationComplete.value = true;
     }
-  }, 1000); // 每秒更新一次进度
+  }, 1000);
+}
+
+function navigateToShow() {
+  router.push({ path: '/show', query: { description: description.value } });
 }
 
 onMounted(() => {
   const img = new Image();
   img.src = imageUrl.value;
-  img.onload = () => {
+  img.addEventListener('load', () => {
     imageWidth.value = img.naturalWidth;
     imageHeight.value = img.naturalHeight;
-  };
+  });
 });
 </script>
 
 <template>
   <div
-    class="dark:bg-gray-900 dark:text-gray-100 flex flex-col items-center justify-center w-full min-h-screen"
+    class="dark:bg-gray-900 dark:text-gray-100 flex flex-col items-center justify-center w-5/6 mx-auto min-h-screen"
   >
     <h1 class="text-6xl font-serif mb-8">T2Vtuber</h1>
     <div
-      class="bg-gray-200 dark:bg-gray-800 rounded-2xl p-4 max-w-screen-2xl w-full mx-auto shadow-md flex flex-col justify-between h-auto"
+      class="bg-gray-200 dark:bg-gray-800 rounded-2xl p-4 max-w-screen-2xl w-5/6 mx-auto shadow-md flex flex-col justify-between h-auto"
     >
       <div
         class="text-left font-serif text-2xl text-black dark:text-white rounded-2xl px-4 py-2 mb-4 inline-block"
@@ -79,7 +85,10 @@ onMounted(() => {
           </div>
         </div>
         <div v-else class="text-2xl text-indigo-500">
-          Successfully Generated
+          Successfully Generated!<br />
+          <button @click="navigateToShow" class="mt-20 ml-4 px-4 py-2 bg-indigo-500 text-white rounded">
+            Show the model
+          </button>
         </div>
       </div>
 
@@ -108,5 +117,4 @@ onMounted(() => {
 </template>
 
 <style scoped>
-/* 你的样式 */
 </style>
