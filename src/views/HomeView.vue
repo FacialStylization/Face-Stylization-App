@@ -79,7 +79,7 @@ const props = defineProps({
         <div class="relative w-1/3 p-4">
           <div class="relative rounded-3xl overflow-hidden">
             <img
-              src="@/assets/pic1.png"
+              src="@/assets/p1.jpg"
               alt="RoadMap"
               class="object-cover w-full h-full"
             />
@@ -88,11 +88,11 @@ const props = defineProps({
               class="absolute inset-0 flex flex-col justify-between items-start p-4 bg-black bg-opacity-50"
             >
               <!-- Title at the top -->
-              <h2 class="text-6xl font-serif text-white mb-2">RoadMap</h2>
+              <h2 class="text-6xl font-serif text-white opacity-60 mb-2">RoadMap</h2>
               <!-- Button at the bottom -->
               <button
                 @click="toRoadMap"
-                class="px-4 py-2 mt-auto bg-white text-black rounded-full font-serif shadow-md hover:bg-gray-200"
+                class="px-4 py-2 mt-auto bg-white text-black opacity-60 rounded-full font-serif shadow-md hover:bg-gray-200"
               >
                 Go to RoadMap →
               </button>
@@ -104,7 +104,7 @@ const props = defineProps({
         <div class="relative w-1/3 p-4">
           <div class="relative rounded-3xl overflow-hidden">
             <img
-              src="@/assets/pic2.png"
+              src="@/assets/p2.jpg"
               alt="Pricing"
               class="object-cover w-full h-full"
             />
@@ -113,11 +113,11 @@ const props = defineProps({
               class="absolute inset-0 flex flex-col justify-between items-start p-4 bg-black bg-opacity-50"
             >
               <!-- Title at the top -->
-              <h2 class="text-6xl font-serif text-white mb-2">Pricing</h2>
+              <h2 class="text-6xl font-serif text-white opacity-60 mb-2">Pricing</h2>
               <!-- Button at the bottom -->
               <button
                 @click="toPricing"
-                class="px-4 py-2 mt-auto bg-white text-black rounded-full font-serif shadow-md hover:bg-gray-200"
+                class="px-4 py-2 mt-auto bg-white text-black opacity-60 rounded-full font-serif shadow-md hover:bg-gray-200"
               >
                 Go to Pricing →
               </button>
@@ -129,7 +129,7 @@ const props = defineProps({
         <div class="relative w-1/3 p-4">
           <div class="relative rounded-3xl overflow-hidden">
             <img
-              src="@/assets/pic3.png"
+              src="@/assets/p3.jpg"
               alt="Setup"
               class="object-cover w-full h-full"
             />
@@ -138,11 +138,11 @@ const props = defineProps({
               class="absolute inset-0 flex flex-col justify-between items-start p-4 bg-black bg-opacity-50"
             >
               <!-- Title at the top -->
-              <h2 class="text-6xl font-serif text-white mb-2">Setup</h2>
+              <h2 class="text-6xl font-serif text-white opacity-60 mb-2">Setup</h2>
               <!-- Button at the bottom -->
               <button
                 @click="toSetup"
-                class="px-4 py-2 mt-auto bg-white text-black rounded-full font-serif shadow-md hover:bg-gray-200"
+                class="px-4 py-2 mt-auto bg-white text-black opacity-60 rounded-full font-serif shadow-md hover:bg-gray-200"
               >
                 Go to Setup →
               </button>
@@ -153,3 +153,5 @@ const props = defineProps({
     </div>
   </div>
 </template>
+<style scoped>
+</style>
